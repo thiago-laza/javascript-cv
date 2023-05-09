@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body{
+            background-color: rgba(128, 128, 128, 0.418);
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        div#painel{
+            background-color: black;
+            color: white;
+            padding: 90px;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        div#painel > p{
+            font-size: 2em;
+            text-align: center;
+        }
+
+        div#painel > input{
+            padding: 30px;
+            width: 70px;
+            font-size: 2em;
+            border-radius: 20px;
+            border: solid 5px aqua;
+        }
+
+        div#painel2{
+            background-color: aqua;
+            padding: 10px;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        div#painel2 > input{
+            width: 100px;
+            height: 70px;
+            font-size: 1.2em;
+            border-radius: 20px;
+            border: solid 5px black;
+
+        }
+        
+        div#painel2 > input:hover{
+            transform: scale(1.2);
+            background-color: red;
+            color:white;
+        }
+
+        div#res{
+            background-color: black;
+            color: white;
+            font-size: 2.5em;
+            text-align: center;
+            border-radius: 20px;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+
+    <div id="painel">
+        <p class="inf">Velocidade do carro:</p> 
+        <input type="number" name="txtvel" id="txtvel"> Km/h
+    </div>
+
+    <div id="painel2">
+        <input type="button" value="verificar"  onclick="calcular()">
+    </div>
+    
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        
+        function calcular(){
+            
+            var txtv = window.document.getElementById('txtvel')
+            var res = window.document.getElementById('res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} km/h</strong></p>`
+            if (vel > 60){
+                res.innerHTML += '<p>Você está <strong>MULTADO</strong> por excesso de velocidade.</p>'
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+
+        h1{
+            color: white;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        div#menu{
+            background-color: gray;
+            margin: 100px 300px;
+            text-align: center;
+            padding: 50px;
+            border-radius: 25px;
+            border: solid 5px rgba(255, 0, 0, 0.575);
+            box-shadow: 3px 3px 3px black;
+        }
+
+        input#valor1{
+            border-radius: 5px;
+            border: solid 2px black;
+            box-shadow: 2px 2px 2px;
+            width: 90px;
+            height: 90px;
+            font-size: 3em;
+            text-align: center;
+        }
+
+        input#valor2{
+            border-radius: 5px;
+            border: solid 2px black;
+            box-shadow: 2px 2px 2px;
+            width: 90px;
+            height: 90px;
+            font-size: 3em;
+            text-align: center;
+        }
+
+        input#resultado{
+            font-size: 1.1em;
+            font-style: oblique;
+            display:block;
+            border-radius: 5px;
+            border: solid 2px black;
+            box-shadow: 2px 2px 2px;
+            width: 90px;
+            height: 60px;
+            margin: auto;
+            margin-top: 50px;
+            
+        }
+
+        input#resultado:hover{
+            background-color: rgba(255, 0, 0, 0.267);
+            transform: scale(1.1);
+            color: aqua;
+        }
+
+        div#res{
+            color: white;
+            font-size: 2em;
+            background-color: gray;
+            margin: 200px 300px;
+            text-align: center;
+            padding: 50px;
+            border-radius: 25px;
+            border: solid 5px rgba(255, 0, 0, 0.575);
+            box-shadow: 3px 3px 3px black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SOMA ENTRE DOI NÚMEROS</h1>
+
+    <div id="menu">
+        <input type="number" name="valor1" id="valor1">
+        <input type="number" name="valor2" id="valor2">
+        <hr> 
+        <input type="button" value="resultado" id="resultado" onclick="somar()">
+    </div>
+    
+
+    <div id="res">Resultado</div>
+
+    <script>
+
+        function somar(){
+            var vn1 = window.document.getElementById('valor1')
+            var vn2 = window.document.getElementById('valor2')
+            var res = window.document.getElementById('res')
+
+            var n1 = Number(vn1.value)
+            var n2 = Number(vn2.value)
+
+            var s = n1 + n2
+
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+        }
+        
+
+
+    </script>
+    
+</body>
+</html>
