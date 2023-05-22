@@ -15,29 +15,27 @@
         <div>
 
             <p>
-                Ano de nascimento: <input type="number" name="" id="">
+                Ano de nascimento: <input type="number" name="txtano" id="txtano" min="0">
             </p>
 
             <p>
                 Sexo:
-                <input type="radio" name="" id="">
-                <label for="">Masculino</label>
-                <input type="radio" name="" id="">
-                <label for="">Feminino</label>
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
             </p>
 
             <p>
-                <input type="button" value="Verificar" id="botao">
+                <input type="button" value="Verificar" id="botao" onclick="verificar()">
             </p>
             
            
         </div>
 
-        <div id="imagem">
-            <img src="imagens (1)/adolescente_f_1.png"   alt="">
-        </div>
+        
 
-        <div id="info">
+        <div id="res">
             <p>Preencha os dados acima para ver o resultado</p>
         </div>
 
