@@ -10,7 +10,37 @@ function calcular(){
 
     
 
-    for(let c = i; c <= f; c += p){
-        res.innerHTML += ` ${c}`
+    if(inicio.value.length == 0  || fim.value.length == 0 || passo.value.length == 0){
+        alert('Impossivel contar')
+    }else{
+        if(p <= 0){
+            alert('Passo invalido, considerando passo igual a 1')
+            p = 1
+        }
+        if(i < f){
+            for(let c = i; c <= f; c += p){
+                res.innerHTML += ` ${c}`
+            }
+        }else{
+            for(let c = i; c >= f; c -= p){
+                res.innerHTML += ` ${c}`
+            }
+        }
+        
+
     }
+    
+    
+    
+    
+    
+    
+   
+    
+    
+    
+    
+    
+
+    
 }
