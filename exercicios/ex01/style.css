@@ -1,0 +1,19 @@
+body{
+    background: rgb(128, 128, 211);
+}
+
+
+div{
+    margin:100px 200px 50px 200px;
+    
+}
+
+#imagens{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#imagem_1:hover,#imagem_2:hover,#imagem_3:hover{
+    transform: scale(1.2);
+}
