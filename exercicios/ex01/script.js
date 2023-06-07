@@ -8,7 +8,7 @@ a.addEventListener('click',clicar)
 a.addEventListener('mouseout',sair)
 
 function clicar(){
-    res.innerText = 'Clicou'
+    res.innerText = 'Clicou2'
     
 }
 
