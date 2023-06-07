@@ -3,17 +3,18 @@ body{
 }
 
 
-div{
-    margin:100px 200px 50px 200px;
+
+#imagem{
+    display: block;
+    margin: auto;  
     
 }
 
-#imagens{
-    display: flex;
-    justify-content: space-between;
+#res{
+    color: white;
+    font-size: 2em;
+    text-align: center;
     
 }
 
-#imagem_1:hover,#imagem_2:hover,#imagem_3:hover{
-    transform: scale(1.2);
-}
+
