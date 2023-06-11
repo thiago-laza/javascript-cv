@@ -1,6 +1,7 @@
 var a = window.document.getElementById('imagem')
 var res = document.getElementById('res')
 
+
 a.addEventListener('mouseenter',entrar)
 a.addEventListener('click',clicar)
 a.addEventListener('mouseout',sair)
